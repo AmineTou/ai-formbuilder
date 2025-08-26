@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import GeneratedForm from "@/components/GeneratedForm";
-import { saveForm } from "./save-action";
+import { saveForm } from "@/app/(app)/new/save-action";
 
 type Option = { label: string; value: string };
 type Field = {
@@ -29,8 +29,8 @@ export default function NewFormPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || "Generation failed");
       setSpec(data.spec);
-    } catch (e: any) {
-      setErr(e.message);
+    } catch (e: Error | unknown) {
+      setErr(e instanceof Error ? e.message : String(e));
     } finally {
       setLoading(false);
     }
