@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# AI Form Builder
+
+An AI-powered form builder that lets users generate, edit, and manage forms 
+dynamically. Built with Next.js 14, Tailwind CSS, shadcn/ui, Drizzle ORM, and Neon (Postgres).  
+Includes AI integrations for automated form generation and smart field suggestions.
+
+## Features
+- Generate forms with AI prompts
+- Customize fields and validation rules
+- Store and manage forms with Postgres (Neon)
+- Modern UI with shadcn/ui + Tailwind
+- API-ready backend with Drizzle ORM
+
+## Stack
+- Next.js 14
+- shadcn/ui + Tailwind CSS
+- Drizzle ORM + Neon (Postgres)
+- Vercel AI SDK
