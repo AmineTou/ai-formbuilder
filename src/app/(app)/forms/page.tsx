@@ -8,7 +8,7 @@ export default async function FormsPage() {
   return (
     <main className="max-w-3xl mx-auto p-6 space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Mes formulaires</h1>
+        <h1 className="text-2xl font-semibold">My Forms</h1>
         <Link href="/new" className="px-3 py-2 rounded bg-black text-white">Nouveau</Link>
       </div>
 
