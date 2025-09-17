@@ -7,8 +7,8 @@ export default function Home() {
       <h1 className="text-2xl font-semibold">{APP.name}</h1>
       <p className="text-muted-foreground">{APP.description}</p>
       <div className="flex gap-3">
-        <Link href="/forms" className="px-4 py-2 rounded bg-black text-white">Voir mes formulaires</Link>
-        <Link href="/new" className="px-4 py-2 rounded border">Nouveau formulaire</Link>
+        <Link href="/forms" className="px-4 py-2 rounded bg-black text-white">Forms List</Link>
+        <Link href="/new" className="px-4 py-2 rounded border">New Form</Link>
       </div>
     </main>
   );

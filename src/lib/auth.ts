@@ -5,5 +5,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
     Google
   ],
-  session: { strategy: "jwt" }
+  session: { strategy: "jwt" },
+  pages: {
+    signIn: "/login",
+  },
+  callbacks: {
+    authorized({ auth, request: { nextUrl } }) {
+      const isPublic =
+        nextUrl.pathname.startsWith("/login") ||
+        nextUrl.pathname.startsWith("/api/auth") ||
+        nextUrl.pathname.startsWith("/_next") ||
+        nextUrl.pathname.startsWith("/images") ||
+        ["/favicon.ico", "/robots.txt", "/sitemap.xml"].includes(nextUrl.pathname);
+      if (isPublic) return true;
+      return !!auth?.user; 
+    }
+  }
 });
